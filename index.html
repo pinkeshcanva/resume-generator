@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume & Cover Letter Generator</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include html2pdf.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
 </head>
 <body>
     <div class="container">
@@ -30,6 +32,9 @@
 
         <div id="loading" style="display: none;">Generating...</div>
         <div id="output"></div>
+
+        <!-- Button to trigger PDF download -->
+        <button id="download-pdf" style="display: none;">Download as PDF</button>
     </div>
 
     <script src="app.js"></script>
