@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generate Your Resume and Cover Letter</h1>
+    <form id="generator-form">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" required>
+        
+        <label for="experience">Your Experience:</label>
+        <textarea id="experience" name="experience" required></textarea>
+        
+        <label for="company_info">Company Info:</label>
+        <textarea id="company_info" name="company_info" required></textarea>
+
+        <label for="template_type">Template Type:</label>
+        <select id="template_type" name="template_type">
+            <option value="resume">Resume</option>
+            <option value="cover letter">Cover Letter</option>
+        </select>
+
+        <button type="submit">Generate</button>
+    </form>
+    <div id="output"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
