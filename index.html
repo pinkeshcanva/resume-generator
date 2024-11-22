@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Generate Your Resume and Cover Letter</h1>
-    <form id="generator-form">
-        <label for="job_title">Job Title:</label>
-        <input type="text" id="job_title" name="job_title" required>
-        
-        <label for="experience">Your Experience:</label>
-        <textarea id="experience" name="experience" required></textarea>
-        
-        <label for="company_info">Company Info:</label>
-        <textarea id="company_info" name="company_info" required></textarea>
+    <div class="container">
+        <h1>Generate Resume and Cover Letter</h1>
+        <form id="generator-form">
+            <label for="job_title">Job Title:</label>
+            <input type="text" id="job_title" name="job_title" required>
+            
+            <label for="experience">Your Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+            
+            <label for="company_info">Company Info:</label>
+            <textarea id="company_info" name="company_info" required></textarea>
 
-        <label for="template_type">Template Type:</label>
-        <select id="template_type" name="template_type">
-            <option value="resume">Resume</option>
-            <option value="cover letter">Cover Letter</option>
-        </select>
+            <label for="template_type">Template Type:</label>
+            <select id="template_type" name="template_type">
+                <option value="resume">Resume</option>
+                <option value="cover letter">Cover Letter</option>
+            </select>
 
-        <button type="submit">Generate</button>
-    </form>
-    <div id="output"></div>
+            <button type="submit">Generate</button>
+        </form>
+
+        <div id="loading" style="display: none;">Generating...</div>
+        <div id="output"></div>
+    </div>
 
     <script src="app.js"></script>
 </body>
