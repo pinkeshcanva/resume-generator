@@ -20,7 +20,17 @@ document.getElementById('generator-form').addEventListener('submit', async (e) =
         document.getElementById('loading').style.display = 'none';
 
         if (response.ok) {
-            document.getElementById('output').innerText = result.generated_text;
+            const generatedText = result.generated_text;
+            document.getElementById('output').innerText = generatedText;
+
+            // Show the download PDF button
+            document.getElementById('download-pdf').style.display = 'block';
+
+            // Add event listener to the PDF download button
+            document.getElementById('download-pdf').addEventListener('click', () => {
+                const element = document.getElementById('output'); // Get the content to download
+                html2pdf(element); // Trigger PDF download
+            });
         } else {
             document.getElementById('output').innerText = "Error generating content. Please try again.";
         }
